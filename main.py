@@ -159,8 +159,8 @@ def main(page: ft.Page):
 DEFAULT_FLET_PATH = ''  # or 'ui/path'
 DEFAULT_FLET_PORT = 8501
 
+
 if __name__ == "__main__":
     flet_path = os.getenv("FLET_PATH", DEFAULT_FLET_PATH)
     flet_port = int(os.getenv("FLET_PORT", DEFAULT_FLET_PORT))
-    ft.app(name=flet_path, target=main, view=None, port=flet_port)
-# ft.app(target=main, view=ft.AppView.FLET_APP_WEB, port=80)
+    ft.app(name=flet_path, target=main, view=None, assets_dir="assets", port=flet_port)
