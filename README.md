@@ -13,6 +13,17 @@ source .venv/bin/activate
 pip install -r requirements.txt
 </pre>
 
+### Enable the Flet server
+
+<pre>
+cd /etc/systemd/system
+sudo ln -s /home/ubuntu/char_flet/chat_flet.service
+sudo systemctl start chat_flet
+sudo systemctl enable chat_flet
+sudo systemctl status chat_flet
+</pre>
+
+
 ## 
 <img src="img/img.png">
 
