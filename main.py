@@ -15,30 +15,6 @@ def get_initials(user_name: str):
     return user_name[:1].capitalize()
 
 
-"""
-def get_avatar_color(user_name: str):
-    colors_lookup = [
-        ft.colors.AMBER,
-        ft.colors.BLUE,
-        ft.colors.BROWN,
-        ft.colors.CYAN,
-        ft.colors.GREEN,
-        ft.colors.INDIGO,
-        ft.colors.LIME,
-        ft.colors.ORANGE,
-        ft.colors.PINK,
-        ft.colors.PURPLE,
-        ft.colors.RED,
-        ft.colors.TEAL,
-        ft.colors.YELLOW,
-    ]
-    hashes = hash(user_name)
-    color = hash(user_name) % len(colors_lookup)
-    print(hashes, color, hashes % color)
-    return colors_lookup[hash(user_name) % len(colors_lookup)]
-"""
-
-
 class ChatMessage(ft.Row):
     def __init__(self, message: Message):
         super().__init__()
@@ -82,7 +58,6 @@ def main(page: ft.Page):
         m = ''
         if message.message_type == "chat_message":
             m = ChatMessage(message)
-            # get_avatar_color(user_name.value)
         elif message.message_type == "login_message":
             m = ft.Text(message.text, italic=True, color=ft.colors.BLACK45, size=12)
         chat.controls.append(m)
@@ -147,8 +122,6 @@ def main(page: ft.Page):
             ]
         )
     )
-
-    # page.add(ft.Image(src="/assets/favicon.png"))
 
     page.dialog = ft.AlertDialog(
         open=True,
