@@ -27,6 +27,8 @@ sudo systemctl status chat_flet
 
 <pre>
   python -m venv .venv
+  source .venv/bin/activate
+  pip install -r requirements.txt
   sudo systemctl restart chat_flet
 </pre>
 
