@@ -1,6 +1,6 @@
 import random
 import flet as ft
-
+import os
 
 class Message:
     def __init__(self, user: str, user_color: str, text: str, message_type: str):
@@ -156,5 +156,11 @@ def main(page: ft.Page):
         actions_alignment=ft.MainAxisAlignment.END,
     )
 
+DEFAULT_FLET_PATH = ''  # or 'ui/path'
+DEFAULT_FLET_PORT = 8501
 
-ft.app(target=main, view=ft.AppView.FLET_APP_WEB)
+if __name__ == "__main__":
+    flet_path = os.getenv("FLET_PATH", DEFAULT_FLET_PATH)
+    flet_port = int(os.getenv("FLET_PORT", DEFAULT_FLET_PORT))
+    ft.app(name=flet_path, target=main, view=None, port=flet_port)
+# ft.app(target=main, view=ft.AppView.FLET_APP_WEB, port=80)
