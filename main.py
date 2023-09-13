@@ -148,7 +148,7 @@ def main(page: ft.Page):
         )
     )
 
-    page.add(ft.Image(src="/assets/favicon.png"))
+    # page.add(ft.Image(src="/assets/favicon.png"))
 
     page.dialog = ft.AlertDialog(
         open=True,
