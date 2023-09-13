@@ -1,5 +1,5 @@
 # chat_flet
 ##
-<img src="img.png">
+<img src="img/img.png">
 ##
-<img src="img1.png">
+<img src="img/img1.png">
