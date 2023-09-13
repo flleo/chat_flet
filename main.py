@@ -2,6 +2,7 @@ import random
 import flet as ft
 import os
 
+
 class Message:
     def __init__(self, user: str, user_color: str, text: str, message_type: str):
         self.user_name = user
@@ -147,6 +148,8 @@ def main(page: ft.Page):
         )
     )
 
+    page.add(ft.Image(src="/assets/favicon.png"))
+
     page.dialog = ft.AlertDialog(
         open=True,
         modal=True,
@@ -156,9 +159,9 @@ def main(page: ft.Page):
         actions_alignment=ft.MainAxisAlignment.END,
     )
 
+
 DEFAULT_FLET_PATH = ''  # or 'ui/path'
 DEFAULT_FLET_PORT = 8501
-
 
 if __name__ == "__main__":
     flet_path = os.getenv("FLET_PATH", DEFAULT_FLET_PATH)
