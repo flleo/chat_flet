@@ -5,9 +5,9 @@ After=network.target
 [Service]
 User=fed		
 Group=fed
-WorkingDirectory=/home/fed/www/python/flet/chat
-Environment="PATH=/home/fed/www/python/flet/chat/.venv/bin"
-ExecStart=/home/fed/www/python/flet/chat/.venv/bin/python /home/fed/www/python/flet/chat/main.py
+WorkingDirectory=/home/fed/www/python/chat
+Environment="PATH=/home/fed/www/python/chat/.venv/bin"
+ExecStart=/home/fed/www/python/chat/.venv/bin/python /home/fed/www/python/chat/main.py
 
 [Install]
 WantedBy=multi-user.target
