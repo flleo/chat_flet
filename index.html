@@ -1,0 +1,29 @@
+<html>
+    <head>
+	    <title>Chat</title>
+            <link rel="icon" type="image/x-icon" href="assets/icons/loading-animation.png">    </head>
+    <style>
+    html,
+    body {
+        overflow: hidden;
+    }
+    iframe {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        margin-top: -10px;
+        margin-left: -10px;
+    }
+    </style>
+
+    <body>
+	    <iframe src="https://chat.fedelleos.es" scrolling="no" style="visibility:hidden;"></iframe>
+		  
+    </body>
+    <script>
+	setTimeout(apear, 2000);  
+        function apear(){
+            document.getElementsByTagName('iframe')[0].style.visibility = 'visible'
+        }   
+    </script>
+</html>
